@@ -3,6 +3,7 @@ Taking place in an elevator, Lift is a narrative VR game told through the eyes o
 Links to some of my best/cleanest work:
 
 Ver 2:
+
 https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Classes/genericFood.cs
 https://github.com/Jurosale/LiftVR/tree/master/LiftVR_V2/Scripts/FoodScripts
 https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/FoodSpawner.cs
@@ -13,6 +14,7 @@ https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/DeviceInfo.cs
 https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/FloorManager.cs
 
 Ver 1:
+
 https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V1/Scripts/ClockAnimator.cs
 https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V1/Scripts/DisableGesture.cs
 https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V1/Scripts/DayManager.cs
