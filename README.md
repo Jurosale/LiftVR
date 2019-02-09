@@ -10,7 +10,6 @@ https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/FoodSpawner.cs
 https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/genericGrabObject.cs
 https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/Pocket.cs
 https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/PatronPocket.cs
-https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/DeviceInfo.cs
 https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/FloorManager.cs
 
 Ver 1:
