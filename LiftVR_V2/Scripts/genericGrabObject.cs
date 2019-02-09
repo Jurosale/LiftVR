@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//collaboration with teammates
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -55,7 +56,8 @@ public class genericGrabObject : MonoBehaviour {
     {
 
     }
-
+    
+    //this and below are my code contributions
     private void OnTriggerEnter(Collider other)
     {
 

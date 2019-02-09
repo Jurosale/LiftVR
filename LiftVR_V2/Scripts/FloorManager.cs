@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//collaboration with teammates
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,6 +20,7 @@ public class Floor
 //This Script Will Load In A New Floor
 public class FloorManager : MonoBehaviour
 {
+    //everything in this section is my contribution
     [SerializeField]
     public GameObject[] floors;                             //[] is the gameObject floor holder
     public Dictionary<state.floor, Floor> floorDic;

@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿//collaboration with teammates
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class DayManager : MonoBehaviour
 {
+    //this section, start function, nextDay function, & dayReset are my contributions
     [Header("Globals")]
     public bool patronPresent = false;                          //If true there is a patron in the elevator
 
