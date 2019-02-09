@@ -20,5 +20,5 @@ https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V1/Scripts/DisableGesture.
 https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V1/Scripts/DayManager.cs
 https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V1/Scripts/InteractiveObjects.cs
 
-Note: LiftVR is a work in progress and went through plenty of revisions. Ver. 1 (demo) available now.
+Note: LiftVR is a work in progress and went through plenty of revisions. Ver. 1 (demo) available now:
 https://tfslift.itch.io/lift
