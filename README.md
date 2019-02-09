@@ -1,6 +1,6 @@
 Taking place in an elevator, Lift is a narrative VR game told through the eyes of the lone operator. Using the HTC Vive, create gestures to interact with guests, take individuals to their designated floor (or not), and determine how the story will impact all involved. 
 
-Links to some of my best/cleanest work. All work is all my own unless otherwise stated:
+Links to some of my best/cleanest work. All work is all my own unless otherwise stated at the top of file:
 
 Ver 2:
 
