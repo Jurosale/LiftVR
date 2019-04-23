@@ -2,13 +2,13 @@ Taking place in an elevator, Lift is a narrative VR game told through the eyes o
 
 Links to some of my best/cleanest work. All work below is all my own unless otherwise stated at the top of file:
 
-https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Classes/genericFood.cs
-https://github.com/Jurosale/LiftVR/tree/master/LiftVR_V2/Scripts/FoodScripts
-https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/FoodSpawner.cs
-https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/genericGrabObject.cs
-https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/Pocket.cs
-https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/PatronPocket.cs
-https://github.com/Jurosale/LiftVR/blob/master/LiftVR_V2/Scripts/FloorManager.cs
+https://github.com/Jurosale/LiftVR/blob/master/Classes/genericFood.cs
+https://github.com/Jurosale/LiftVR/tree/master/Scripts/FoodScripts
+https://github.com/Jurosale/LiftVR/blob/master/Scripts/FoodSpawner.cs
+https://github.com/Jurosale/LiftVR/blob/master/Scripts/genericGrabObject.cs
+https://github.com/Jurosale/LiftVR/blob/master/Scripts/Pocket.cs
+https://github.com/Jurosale/LiftVR/blob/master/Scripts/PatronPocket.cs
+https://github.com/Jurosale/LiftVR/blob/master/Scripts/FloorManager.cs
 
 Team Members:
 Daniel Chamberlin,
