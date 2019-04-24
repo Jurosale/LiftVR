@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pocket : MonoBehaviour
+class Pocket : MonoBehaviour
 {
 
     private List<GameObject> pocket = new List<GameObject>();
@@ -66,7 +66,7 @@ public class Pocket : MonoBehaviour
     //checks and determines whether player is trying to
     //grab an object out of pocket or put one in and
     //with which hand specifically
-    private void OnTriggerStay(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "grabPointR")
         {

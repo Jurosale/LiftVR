@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Floor
+class Floor
 {
     private GameObject reference;
     private Vector3 floorStart;
@@ -33,7 +33,7 @@ public class Floor
 
 [ExecuteInEditMode]
 //This Script Will Load In A New Floor
-public class FloorManager : MonoBehaviour
+class FloorManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] floors;                             
@@ -63,7 +63,7 @@ public class FloorManager : MonoBehaviour
 
     //Called from elevatorMovement when a new floor is reached
     //inEditor is true if this function is called inEditor, false otherwise
-    public void LoadNewFloor(state.floor targetFloor, bool inEditor)
+    void LoadNewFloor(state.floor targetFloor, bool inEditor)
     {
         if (activeFloor != targetFloor)
         {
@@ -88,7 +88,7 @@ public class FloorManager : MonoBehaviour
         }
     }
 
-    public GameObject GetReference(state.floor param)
+    GameObject GetReference(state.floor param)
     {
         return floorDic[param].GetObjReference();
     }

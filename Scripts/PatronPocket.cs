@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatronPocket : MonoBehaviour
+class PatronPocket : MonoBehaviour
 {
 
     private List<GameObject> patronPocket = new List<GameObject>();
@@ -67,7 +67,7 @@ public class PatronPocket : MonoBehaviour
     //checks and determines whether player is trying to
     //grab an object out of patron's pocket or put one
     //in and with which hand specifically
-    private void OnTriggerStay(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "grabPointR")
         {

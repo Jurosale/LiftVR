@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Meat : genericFood {
+class Meat : genericFood {
 
 	// Use this for initialization
 	void Start ()

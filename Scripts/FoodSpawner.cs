@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoodSpawner : MonoBehaviour
+class FoodSpawner : MonoBehaviour
 {
 
     //makes values easier to test for specific conditions
