@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class genericFood : MonoBehaviour
 {
 
-    public state.foodType food;
+    protected state.foodType food;
     protected int min = 1, max = 5;
     protected int rating, initRating;
     protected bool isCookingL, isCookingR;

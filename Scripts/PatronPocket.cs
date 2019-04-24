@@ -12,8 +12,8 @@ public class PatronPocket : MonoBehaviour
 
     Pocket avatarPocket;
 
-    //needs to be set in main patron script
-    public bool canPickPocket;
+    //implement a setter in main patron script to change this bool
+    private bool canPickPocket;
 
     // Use this for initialization
     void Start()
