@@ -9,7 +9,7 @@ public class Pocket : MonoBehaviour
 
     SDKAdjust handManager;
 
-    public GameObject handLeft, handRight;
+    private GameObject handLeft, handRight;
 
     // Use this for initialization
     void Start()
