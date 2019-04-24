@@ -6,13 +6,28 @@ using UnityEngine.SceneManagement;
 
 public class Floor
 {
-    public GameObject reference;
-    public Vector3 floorStart;
+    private GameObject reference;
+    private Vector3 floorStart;
 
+    //sets the gameObject and position for each floor object
     public Floor(GameObject floorReference, Vector3 startPosition)
     {
         reference = floorReference;
         floorStart = startPosition;
+    }
+
+    //everything here and below is my contribution
+
+    //activates/disactivates the specified floor
+    public void SetActiveStatus(bool isActive)
+    {
+        reference.SetActive(isActive);
+    }
+
+    //grabs the floor's gameObject
+    public GameObject GetObjReference()
+    {
+        return reference;
     }
 }
 
@@ -20,17 +35,17 @@ public class Floor
 //This Script Will Load In A New Floor
 public class FloorManager : MonoBehaviour
 {
-    //everything in this section is my contribution
     [SerializeField]
-    public GameObject[] floors;                             //[] is the gameObject floor holder
-    public Dictionary<state.floor, Floor> floorDic;
+    private GameObject[] floors;                             
+    private Dictionary<state.floor, Floor> floorDic;
 
     //The Currently Active Floor by enumerator, can be searced in floorDic for GameObject Reference
     private state.floor activeFloor;
 
 
-    void Awake() {
-        if(floors.Length < 7)
+    void Awake()
+    {
+        if (floors.Length < 7)
         {
             return;
         }
@@ -39,7 +54,8 @@ public class FloorManager : MonoBehaviour
 
         //Iterate through the state.floor enum to assign a Dict with every floor from the array
         string[] floorNames = System.Enum.GetNames(typeof(state.floor));
-        for (int i = 0; i < floorNames.Length; i++) {
+        for (int i = 0; i < floorNames.Length; i++)
+        {
             floorDic.Add((state.floor)i, new Floor(floors[i], floors[i].transform.position));
         }
         activeFloor = state.floor.Empty;
@@ -47,7 +63,7 @@ public class FloorManager : MonoBehaviour
 
     //Called from elevatorMovement when a new floor is reached
     //inEditor is true if this function is called inEditor, false otherwise
-    public void loadNewFloor(state.floor targetFloor, bool inEditor)
+    public void LoadNewFloor(state.floor targetFloor, bool inEditor)
     {
         if (activeFloor != targetFloor)
         {
@@ -59,7 +75,7 @@ public class FloorManager : MonoBehaviour
             }
 
             //Turn on the next floor
-            floorDic[targetFloor].reference.SetActive(true);
+            floorDic[targetFloor].SetActiveStatus(true);
 
             //The New Active floor is the floor we just activated
             activeFloor = targetFloor;
@@ -72,8 +88,8 @@ public class FloorManager : MonoBehaviour
         }
     }
 
-    public GameObject getReference(state.floor param)
+    public GameObject GetReference(state.floor param)
     {
-        return floorDic[param].reference;
+        return floorDic[param].GetObjReference();
     }
 }

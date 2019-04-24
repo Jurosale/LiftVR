@@ -33,14 +33,11 @@ public class Soup : genericFood {
 
     void stirring ()
     {
-        //do something
         Debug.Log("stirring stuff into " + this.name);
     }
 
     void throwing ()
     {
-        //do something
         Debug.Log("throwing stuff into " + this.name);
     }
-
 }

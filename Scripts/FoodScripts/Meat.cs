@@ -31,8 +31,6 @@ public class Meat : genericFood {
 
     void pouring ()
     {
-        //do something
         Debug.Log("pouring stuff into " + this.name);
     }
-
 }

@@ -5,9 +5,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatronPocket : MonoBehaviour {
+public class PatronPocket : MonoBehaviour
+{
 
-    List<GameObject> patronPocket = new List<GameObject>();
+    private List<GameObject> patronPocket = new List<GameObject>();
 
     Pocket avatarPocket;
 
@@ -21,12 +22,15 @@ public class PatronPocket : MonoBehaviour {
         avatarPocket = GameObject.Find("Hip").GetComponent<Pocket>();
     }
 
+    //if theres an object in the patron's inventory system,
+    //will "pull" it out of pocket
     void GrabInPatronPocket(GameObject thisHand)
     {
         if (patronPocket.Count > 0)
         {
-            // TODO: instantiate object into patron's hand
-            //let's game know this object is in player's hand
+            Instantiate(patronPocket[0], thisHand.transform.localPosition, Quaternion.identity);
+
+            //checks to see if it player's left or right hand
             if (thisHand.tag == "grabPointR")
             {
                 avatarPocket.handRight = patronPocket[0];
@@ -42,10 +46,12 @@ public class PatronPocket : MonoBehaviour {
 
     }
 
+    //if player is holding object and this object can be put
+    //into patron's pocket,then it will be "pushed in pocket"
+    //and be stored in the patron's inventory system
     void PutInPatronPocket(GameObject thisObj)
     {
-        //TODO: create the tag/layer for these objects 
-        if (thisObj != null /*&& thisObj.tag or thisObj.layer == [insert desired tag/layer name here]*/)
+        if (thisObj != null && thisObj.layer == 1)
         {
             patronPocket.Insert(patronPocket.Count, thisObj);
             Destroy(thisObj);
@@ -58,6 +64,9 @@ public class PatronPocket : MonoBehaviour {
         patronPocket.Insert(patronPocket.Count, thisObj);
     }
 
+    //checks and determines whether player is trying to
+    //grab an object out of patron's pocket or put one
+    //in and with which hand specifically
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "grabPointR")

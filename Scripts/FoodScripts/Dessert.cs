@@ -33,14 +33,11 @@ public class Dessert : genericFood {
 
     void throwing ()
     {
-        //do something
         Debug.Log("throwing stuff into " + this.name);
     }
 
     void shooting ()
     {
-        //do something
         Debug.Log("shooting stuff into " + this.name);
     }
-
 }

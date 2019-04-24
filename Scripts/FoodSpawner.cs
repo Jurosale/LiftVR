@@ -2,26 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoodSpawner : MonoBehaviour {
+public class FoodSpawner : MonoBehaviour
+{
 
-    //public values to make it easier to test foods
-    public int numFoodSpawns;
-    public float secPerSpawn;
-    public state.foodType whichFood;
-    public Vector3 position;
-    public Transform prefabMeat, prefabSoup, prefabDessert;
+    //makes values easier to test for specific conditions
+    [SerializeField]
+    private int numFoodSpawns;
+    [SerializeField]
+    private float secPerSpawn;
+    [SerializeField]
+    private state.foodType whichFood;
+    [SerializeField]
+    private Vector3 position;
+    [SerializeField]
+    private Transform prefabMeat, prefabSoup, prefabDessert;
 
     private int currFoodCount;
     private bool isRandom;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         currFoodCount = 0;
         if (whichFood == state.foodType.Random) { isRandom = true; }
         else { isRandom = false; }
         StartCoroutine("SpawnFood");
-	}
-    
+    }
+
     //spawns food x times after every y seconds; x and y can be adjusted in the inspector
     IEnumerator SpawnFood()
     {
@@ -30,7 +37,7 @@ public class FoodSpawner : MonoBehaviour {
             //if food is random, will randomly spawn one of the other foods
             if (isRandom)
             {
-                int ran = Mathf.RoundToInt(Random.value * 100)%3;
+                int ran = Mathf.RoundToInt(Random.value * 100) % 3;
 
                 if (ran == 0) { whichFood = state.foodType.Meat; }
                 else if (ran == 1) { whichFood = state.foodType.Soup; }
@@ -57,7 +64,7 @@ public class FoodSpawner : MonoBehaviour {
             if (isRandom) { whichFood = state.foodType.Random; }
 
             currFoodCount++;
-            
+
             yield return new WaitForSeconds(secPerSpawn);
         }
     }

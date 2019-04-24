@@ -2,48 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class genericFood : MonoBehaviour {
+public abstract class genericFood : MonoBehaviour
+{
 
     public state.foodType food;
-    private static int min = 1, max = 5;
-    protected int rating;
+    protected int min = 1, max = 5;
+    protected int rating, initRating;
     protected bool isCookingL, isCookingR;
 
-    protected void OnSpawn ()
+    //Every food in the game can be seasoned & have some in game effect
+    //as a result of final outcome
+    protected abstract void seasoning();
+
+    protected abstract void Outcome();
+
+    protected void OnSpawn()
     {
-        rating = Mathf.RoundToInt((min + max) / 2);
+        rating = Mathf.RoundToInt((min + max) / 2f);
+        initRating = rating;
         isCookingL = false;
         isCookingR = false;
     }
 
-    protected void seasoning ()
-    {
-        //do something
-    }
-
-    protected void Outcome ()
-    {
-        int initialRating = Mathf.RoundToInt((min + max) / 2);
-        
-        //if food is worse
-        if (rating < initialRating)
-        {
-            //do something
-        }
-
-        //else if food is better
-        else if (rating > initialRating)
-        {
-            //do something
-        }
-
-        //else if food is the same
-        else
-        {
-            //do something
-        }
-    }
-
+    //lets the game know the user is currently cooking food 
+    //with at least one of the hands
     protected void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "grabPointR")
@@ -57,6 +39,8 @@ public class genericFood : MonoBehaviour {
         }
     }
 
+    //lets game know user is no longer cooking food
+    //with at least one of the hands
     protected void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "grabPointR")
