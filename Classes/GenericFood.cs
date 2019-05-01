@@ -10,7 +10,7 @@ public abstract class GenericFood : MonoBehaviour
     protected int rating, initRating;
     protected bool isCookingL, isCookingR;
 
-    //Every food in game can be seasoned & have some in game effect
+    //Every food in the game can be seasoned & have some in game effect
     //as a result of final outcome
     protected abstract void Seasoning();
 
