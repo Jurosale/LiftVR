@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class Soup : genericFood {
+class Soup : GenericFood {
 
 	// Use this for initialization
 	void Start ()
@@ -17,26 +17,26 @@ class Soup : genericFood {
         if (isCookingL)
         {
             //used for testing purposes, will delete once gestures have been implemented
-            if (Input.GetKeyDown(KeyCode.Z)) { seasoning(); isCookingL = false; }
-            else if (Input.GetKeyDown(KeyCode.C)) { stirring(); isCookingL = false; }
-            else if (Input.GetKeyDown(KeyCode.X)) { throwing(); isCookingL = false; }
+            if (Input.GetKeyDown(KeyCode.Z)) { Seasoning(); isCookingL = false; }
+            else if (Input.GetKeyDown(KeyCode.C)) { Stirring(); isCookingL = false; }
+            else if (Input.GetKeyDown(KeyCode.X)) { Throwing(); isCookingL = false; }
         }
 
         if (isCookingR)
         {
             //used for testing purposes, will delete once gestures have been implemented
-            if (Input.GetKeyDown(KeyCode.Z)) { seasoning(); isCookingR = false; }
-            else if (Input.GetKeyDown(KeyCode.C)) { stirring(); isCookingR = false; }
-            else if (Input.GetKeyDown(KeyCode.X)) { throwing(); isCookingR = false; }
+            if (Input.GetKeyDown(KeyCode.Z)) { Seasoning(); isCookingR = false; }
+            else if (Input.GetKeyDown(KeyCode.C)) { Stirring(); isCookingR = false; }
+            else if (Input.GetKeyDown(KeyCode.X)) { Throwing(); isCookingR = false; }
         }
     }
 
-    void stirring ()
+    void Stirring ()
     {
         Debug.Log("stirring stuff into " + this.name);
     }
 
-    void throwing ()
+    void Throwing ()
     {
         Debug.Log("throwing stuff into " + this.name);
     }

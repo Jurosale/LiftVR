@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class Dessert : genericFood {
+class Dessert : GenericFood {
 
 	// Use this for initialization
 	void Start ()
@@ -17,26 +17,26 @@ class Dessert : genericFood {
         if (isCookingL)
         {
             //used for testing purposes, will delete once gestures have been implemented
-            if (Input.GetKeyDown(KeyCode.Z)) { seasoning(); isCookingL = false; }
-            else if (Input.GetKeyDown(KeyCode.X)) { throwing(); isCookingL = false; }
-            else if (Input.GetKeyDown(KeyCode.C)) { shooting(); isCookingL = false; }
+            if (Input.GetKeyDown(KeyCode.Z)) { Seasoning(); isCookingL = false; }
+            else if (Input.GetKeyDown(KeyCode.X)) { Throwing(); isCookingL = false; }
+            else if (Input.GetKeyDown(KeyCode.C)) { Shooting(); isCookingL = false; }
         }
 
         if (isCookingR)
         {
             //used for testing purposes, will delete once gestures have been implemented
-            if (Input.GetKeyDown(KeyCode.Z)) { seasoning(); isCookingR = false; }
-            else if (Input.GetKeyDown(KeyCode.X)) { throwing(); isCookingR = false; }
-            else if (Input.GetKeyDown(KeyCode.C)) { shooting(); isCookingR = false; }
+            if (Input.GetKeyDown(KeyCode.Z)) { Seasoning(); isCookingR = false; }
+            else if (Input.GetKeyDown(KeyCode.X)) { Throwing(); isCookingR = false; }
+            else if (Input.GetKeyDown(KeyCode.C)) { Shooting(); isCookingR = false; }
         }
     }
 
-    void throwing ()
+    void Throwing ()
     {
         Debug.Log("throwing stuff into " + this.name);
     }
 
-    void shooting ()
+    void Shooting ()
     {
         Debug.Log("shooting stuff into " + this.name);
     }

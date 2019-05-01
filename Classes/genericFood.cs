@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class genericFood : MonoBehaviour
+public abstract class GenericFood : MonoBehaviour
 {
 
     protected state.foodType food;
@@ -12,7 +12,7 @@ public abstract class genericFood : MonoBehaviour
 
     //Every food in the game can be seasoned & have some in game effect
     //as a result of final outcome
-    protected abstract void seasoning();
+    protected abstract void Seasoning();
 
     protected abstract void Outcome();
 

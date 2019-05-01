@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class Meat : genericFood {
+class Meat : GenericFood {
 
 	// Use this for initialization
 	void Start ()
@@ -17,19 +17,19 @@ class Meat : genericFood {
         if (isCookingL)
         {
             //used for testing purposes, will delete once gestures have been implemented
-            if (Input.GetKeyDown(KeyCode.Z)) { seasoning(); isCookingL = false; }
-            else if (Input.GetKeyDown(KeyCode.X)) { pouring(); isCookingL = false; }
+            if (Input.GetKeyDown(KeyCode.Z)) { Seasoning(); isCookingL = false; }
+            else if (Input.GetKeyDown(KeyCode.X)) { Pouring(); isCookingL = false; }
         }
 
         if (isCookingR)
         {
             //used for testing purposes, will delete once gestures have been implemented
-            if (Input.GetKeyDown(KeyCode.Z)) { seasoning(); isCookingR = false; }
-            else if (Input.GetKeyDown(KeyCode.X)) { pouring(); isCookingR = false; }
+            if (Input.GetKeyDown(KeyCode.Z)) { Seasoning(); isCookingR = false; }
+            else if (Input.GetKeyDown(KeyCode.X)) { Pouring(); isCookingR = false; }
         }
     }
 
-    void pouring ()
+    void Pouring ()
     {
         Debug.Log("pouring stuff into " + this.name);
     }

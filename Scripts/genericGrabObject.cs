@@ -4,7 +4,7 @@ using UnityEngine;
 
 //A grabbable object requires a Rigidbody and collider with a trigger
 [RequireComponent(typeof(Rigidbody))]
-public abstract class genericGrabObject : MonoBehaviour
+public abstract class GenericGrabObject : MonoBehaviour
 {
 
     //Is null if hand not in range, assigned to the gameObject colliding with otherwise
@@ -12,36 +12,36 @@ public abstract class genericGrabObject : MonoBehaviour
     protected GameObject leftHand = null;
 
     //gives every grabbable object different grab states and implementations
-    protected abstract void onGrab(GameObject grabber);
-    protected abstract void whileGrabbed(GameObject grabber);
-    protected abstract void onRelease(GameObject grabber);
+    protected abstract void OnGrab(GameObject grabber);
+    protected abstract void WhileGrabbed(GameObject grabber);
+    protected abstract void OnRelease(GameObject grabber);
 
     // Update is called once per frame
     void Update()
     {
         if (VRInput.getRightTriggerDown() && rightHand != null)
         {
-            onGrab(rightHand);
+            OnGrab(rightHand);
         }
         if (VRInput.getLeftTriggerDown() && leftHand != null)
         {
-            onGrab(leftHand);
+            OnGrab(leftHand);
         }
         if (VRInput.getRightTrigger() && rightHand != null)
         {
-            whileGrabbed(rightHand);
+            WhileGrabbed(rightHand);
         }
         if (VRInput.getLeftTrigger() && leftHand != null)
         {
-            whileGrabbed(leftHand);
+            WhileGrabbed(leftHand);
         }
         if (VRInput.getRightTriggerRelease() && rightHand != null)
         {
-            onRelease(rightHand);
+            OnRelease(rightHand);
         }
         if (VRInput.getLeftTriggerRelease() && leftHand != null)
         {
-            onRelease(leftHand);
+            OnRelease(leftHand);
         }
     }
 
@@ -66,7 +66,7 @@ public abstract class genericGrabObject : MonoBehaviour
         {
             if (leftHand != null)
             {
-                onRelease(leftHand);
+                OnRelease(leftHand);
             }
             leftHand = null;
         }
@@ -74,7 +74,7 @@ public abstract class genericGrabObject : MonoBehaviour
         {
             if (rightHand != null)
             {
-                onRelease(rightHand);
+                OnRelease(rightHand);
             }
             rightHand = null;
         }
