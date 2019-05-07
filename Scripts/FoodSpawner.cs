@@ -19,8 +19,7 @@ class FoodSpawner : MonoBehaviour
 
     private int currFoodCount;
     private bool isRandom;
-
-    // Use this for initialization
+    
     void Start()
     {
         currFoodCount = 0;

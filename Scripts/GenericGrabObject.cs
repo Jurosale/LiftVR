@@ -15,8 +15,7 @@ public abstract class GenericGrabObject : MonoBehaviour
     protected abstract void OnGrab(GameObject grabber);
     protected abstract void WhileGrabbed(GameObject grabber);
     protected abstract void OnRelease(GameObject grabber);
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (VRInput.getRightTriggerDown() && rightHand != null)

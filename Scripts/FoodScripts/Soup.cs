@@ -4,14 +4,12 @@ using UnityEngine;
 
 class Soup : GenericFood {
 
-	// Use this for initialization
 	void Start ()
     {
         OnSpawn();
         food = state.foodType.Soup;
     }
 	
-	// Update is called once per frame
 	void Update ()
     {
         if (isCookingL)
