@@ -16,5 +16,5 @@ Derrek Klauer,
 Andrew Lee,
 Alisia Martinez
 
-Note: LiftVR is a work in progress. Demo available now:
+Demo available now:
 https://tfslift.itch.io/lift
