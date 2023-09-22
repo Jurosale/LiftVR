@@ -16,5 +16,5 @@ Derrek Klauer,
 Andrew Lee,
 Alisia Martinez
 
-Demo available now:
+Free download now available:
 https://tfslift.itch.io/lift
